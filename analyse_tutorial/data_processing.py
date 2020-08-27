@@ -400,7 +400,7 @@ def load_spiketrains(data_path, channel_group=None, load_waveforms=False, lim=No
     '''
     sample_rate = get_sample_rate(data_path)
     sorting = se.ExdirSortingExtractor(
-        data_path, sample_rate=sample_rate,
+        data_path, sampling_frequency=sample_rate,
         channel_group=channel_group, load_waveforms=load_waveforms)
     sptr = []
     # build neo pbjects
